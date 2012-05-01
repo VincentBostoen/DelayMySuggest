@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.cell {
+			float: left;
+		}
+		
+		.suggest {
+			margin-left: 10px;
+		}
+	</ui:style>
+	<g:FlowPanel>
+
+		<g:FlowPanel>
+			<g:Label styleName="{style.cell}">Please change the suggestion delay (ms) :</g:Label>
+			<g:Button ui:field="decrementButton">-</g:Button>
+			<g:TextBox ui:field="delayValueTextBox" width="40px">0</g:TextBox>
+			<g:Button ui:field="incrementButton">+</g:Button>
+		</g:FlowPanel>
+
+		<g:FlowPanel>
+			<g:Label styleName="{style.cell}">Please start to fill a country name :</g:Label>
+			<g:SuggestBox ui:field="suggestBox" width="200px" styleName="{style.suggest}" />
+		</g:FlowPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 
